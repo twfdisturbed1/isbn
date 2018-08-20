@@ -1,0 +1,20 @@
+<link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+<form method="post" action="calculate">
+	<input type="number" name="val_1" placeholder="First Number" required autofocus>
+	<input type="number" name="val_2" placeholder="Second Number" required>
+		<br>Choose operation<hr>
+	<input type="radio" name="operation" id="add" value="add">
+	<label for="add">Add</label>
+	<input type="radio" name="operation" id="subtract" value="subtract">
+	<label for="subtract">Subtract</label>
+	<input type="radio" name="operation" id="multiply" value="multiply">
+	<label for="multiply">Multiply</label>
+	<input type="radio" name="operation" id="divide" value="divide">
+	<label for="divide">Divide</label>
+	<br>
+	<button class="button">Submit</button>
+</form>
+<%result%>
+
+<h2> <%=p "#{val_1}" " " "#{operation}" " " "#{val_2}" " " "=" " " "#{result}"%></h2> 
