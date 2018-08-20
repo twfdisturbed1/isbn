@@ -1,11 +1,3 @@
-require 'csv'
-COUNTRIES = Array.new(240)
-i = 0
-CSV.foreach "mim.csv").flatten
-  COUNTRIES[i] = country[0]
-  i = i + 1
-end
-
 class Fixnum
     # Extension method
     def isOdd() self % 2 != 0 end
@@ -70,18 +62,18 @@ def isValidISBN13( isbn )
     return result
 end
 
-isbns = [
-    "9780470059029",
-    "978-0-13-149505-0",
-    "978 0 471 48648 0",
-    "0471958697",
-    "0-321-14653-0",
-    "877195869x",
-        "4780470059029",
-        "0-321@14653-0",
-        "877195x869",
-]
+# isbns = [
+#     "9780470059029",
+#     "978-0-13-149505-0",
+#     "978 0 471 48648 0",
+#     "0471958697",
+#     "0-321-14653-0",
+#     "877195869x",
+#         "4780470059029",
+#         "0-321@14653-0",
+#         "877195x869",
+# ]
 
-for isbn in isbns
-    puts "ISBN(#{isbn}) is valid? #{isValid(isbn)}"
-end
+# for isbn in isbns
+#     puts "ISBN(#{isbn}) is valid? #{isValid(isbn)}"
+# end
