@@ -1,3 +1,5 @@
+require 'csv'
+
 class Fixnum
     # Extension method
     def isOdd() self % 2 != 0 end
@@ -76,4 +78,30 @@ end
 
 # for isbn in isbns
 #     puts "ISBN(#{isbn}) is valid? #{isValid(isbn)}"
+# end
+
+# CSV.parse(File.read('public/csv/input_isbn_file.csv')) 
+
+numbers_arr = []
+
+# CSV.foreach("public/csv/input_isbn_file.csv", ) do |row|
+#     row.shift
+#     numbers_arr << row
+    
+# end
+
+# p "#{numbers_arr}"
+# def output 
+#     CSV.open("public/csv/output_isbn_file1.csv", "a+") do |csv|
+#      csv << ["ISBN", "VALIDITY"]
+#    p "#{csv}"
+#   numbers_arr.shift
+#      numbers_arr.each do |num|
+#          p "#{num[0]}"  
+#         # csv << ["#{num}", "#{isValid(num)}"]
+#         csv << ["#{isbn}", "#{isValid(isbn)}"]
+#         end
+    
+#     end
+
 # end

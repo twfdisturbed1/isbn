@@ -1,3 +1,19 @@
-
 <% isbns1 %>
-<%= "#{isbns1} #{valid}" %>
+<% isbns1 %>
+<%= "#{isbns1.join(",")}" %> is a <%= "#{valid}" %> ISBN #
+<center>
+<table border="0" cellspacing="5" cellpadding="5">
+  <tr>
+  <% @csv_table.headers.each do |header| %>
+    <th><%= header %></th>
+  <% end %> 
+  </tr>
+  <% @csv_table.each do |row| %>
+    <tr>
+    <% row.each do |element| %>
+      <td><%= element[1] %></td>
+    <% end %>
+    </tr>
+  <% end %> 
+</table>
+</center>
